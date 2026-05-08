@@ -5,7 +5,9 @@ The scripts here were designed for the following human genome annotation: https:
 
 Download the genome assembly, selecting the annotation features (gtf). This will download a zip file. Once you unzip the file, locate the following file: ```genomic.gtf```
 
-To run, create a conda or python environment (python >=3.10).
+To run, create a conda or python environment (python >=3.10). 
+
+IMPORTANT: This environment should be separate from your environment to run the model. At the time of designing the model, there are some conflicting library versions between the two environments. The purpose of these scripts is to isolate data for the model into file formats that are human readable and also interpretable by the model.
 
 Activate your environment and install the following dependencies:
 ```
