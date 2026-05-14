@@ -29,7 +29,7 @@ coTrsc = args.coTrsc
 
 genes = {}
 
-splice.getGeneData(args.dataDir, geneID, genes)
+splice.getGeneData(args.genomeDir, geneID, genes)
 
 splice.getIsoforms(sim, genes, args.genomeDir, geneID)
 
