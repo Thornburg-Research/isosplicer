@@ -1,49 +1,51 @@
 # isosplicer
 Module to simulate mRNA splicing reaction dynamics for the human genome.
 
-## Contents
-model
-human_genome
-publication_simulations
+## Genome Data
 
-## Installation
-This is a Python-based model that uses a conda environment to manage libraries.
+Before running the Python executables here, you need to downlaod and extract the human genome information with the instructions in ```human_genome/```
 
-I recommend working in the main directory for this repository for local installation.
+This extraction only needs to be done once, it is not required for each new installation of isosplicer.
 
-First, create a conda environment from the .yml file provided here. Experienced conda users can change the environment name as desired.
+## Running Instructions
 
-```
-conda env create -f isosplicer.yml
-```
+### Environment
 
-Once the environment is created, activate your environment.
+You need to be in the ```isosplicer``` conda environment described in the parent directory to run the Python executables in this directory.
 
 ```
 conda activate isosplicer
 ```
 
-Download/clone Lattice Microbes from the developer: https://github.com/Luthey-Schulten-Lab/Lattice_Microbes
+### ```exportGeneSheet.py```: Exporting an editable parameters file
 
-Once you have ```Lattice-Microbes/``` locally, make a build directory and move into it. (Location is not important, but I recommend making it in this directory.)
+| Argument | Short | Default | Description |
+|----------|------|---------|-------------|
+| `--geneID` | `-g` | - | Name of gene from human genome |
+| `--genomeDir` | `-gd` | - | Directory containing extracted human genome files (e.g. SRSF6.xlsx) |
+| `--outputdir` | `-od` | `"./"` | Whether the file contains a header row |
+| `--export` | `-exp` | `"global"` | Export global (global) or global+site-specific (site) parameter sheets |
+| `--proteinBinders` | `-pb` | `0` | Number of additional types of splicing factors to add to the simulation |
 
-```
-mkdir build_isosplicer
-cd build_isosplicer
-```
-
-In the build directory, we will install Lattice Microbes.  You will need to use the PATH to where your local Lattice-Microbes repo is located.
-
-```
-cmake /PATH/Lattice-Microbes/src/
-make
-make install
-```
-
-If you want to verify installation, you can run the following command and should get a list of ```lm``` input options..
+Example
 
 ```
-lm --help
+python exportGeneSheet.py -g SRSF6 -gd /Data2/zane/human_genome/GCF_000001405.38/ -exp site -pb 3 -od /home/zane/Models/
 ```
 
-No further dependencies are required to run isosplicer simulations. You are ready to go!
+### ```runGene.py```: Running a simulation for a single gene
+
+| Argument | Short | Default | Description |
+|----------|------|---------|-------------|
+| `--geneID` | `-g` | - | Name of gene from human genome |
+| `--genomeDir` | `-gd` | - | Directory containing extracted human genome files (e.g. SRSF6.xlsx) |
+| `--outputdir` | `-od` | `"./"` | Whether the file contains a header row |
+| `--outputdir` | `-od` | `"./"` | Whether the file contains a header row |
+| `--export` | `-exp` | `"global"` | Export global (global) or global+site-specific (site) parameter sheets |
+| `--proteinBinders` | `-pb` | `0` | Number of additional types of splicing factors to add to the simulation |
+
+Example
+
+```
+python exportGeneSheet.py -g SRSF6 -gd /Data2/zane/human_genome/GCF_000001405.38/ -exp site -pb 3 -od /home/zane/Models/
+```
