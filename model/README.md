@@ -35,7 +35,7 @@ python exportGeneSheet.py -g SRSF6 -gd /Data2/zane/human_genome/GCF_000001405.38
 ### ```runGene.py```: Running a simulation for a single gene
 
 | Argument | Short | Default | Description |
-|----------|------|---------|-------------|
+|-------------|------|---------|-------------|
 | `--geneID` | `-g` | - | Name of gene from human genome |
 | `--genomeDir` | `-gd` | - | Directory containing extracted human genome files (e.g. SRSF6.xlsx) |
 | `--outputdir` | `-od` | `"./"` | Directory to save trajectory files |
