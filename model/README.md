@@ -1,5 +1,4 @@
 # isosplicer
-Module to simulate mRNA splicing reaction dynamics for the human genome.
 
 ## Genome Data
 
@@ -23,7 +22,7 @@ conda activate isosplicer
 |----------|------|---------|-------------|
 | `--geneID` | `-g` | - | Name of gene from human genome |
 | `--genomeDir` | `-gd` | - | Directory containing extracted human genome files (e.g. SRSF6.xlsx) |
-| `--outputdir` | `-od` | `"./"` | Whether the file contains a header row |
+| `--outputdir` | `-od` | `"./"` | Directory to save output Excel file |
 | `--export` | `-exp` | `"global"` | Export global (global) or global+site-specific (site) parameter sheets |
 | `--proteinBinders` | `-pb` | `0` | Number of additional types of splicing factors to add to the simulation |
 
@@ -39,13 +38,19 @@ python exportGeneSheet.py -g SRSF6 -gd /Data2/zane/human_genome/GCF_000001405.38
 |----------|------|---------|-------------|
 | `--geneID` | `-g` | - | Name of gene from human genome |
 | `--genomeDir` | `-gd` | - | Directory containing extracted human genome files (e.g. SRSF6.xlsx) |
-| `--outputdir` | `-od` | `"./"` | Whether the file contains a header row |
-| `--outputdir` | `-od` | `"./"` | Whether the file contains a header row |
-| `--export` | `-exp` | `"global"` | Export global (global) or global+site-specific (site) parameter sheets |
-| `--proteinBinders` | `-pb` | `0` | Number of additional types of splicing factors to add to the simulation |
+| `--outputdir` | `-od` | `"./"` | Directory to save trajectory files |
+| `--replicates` | `-r` | `1` | Number of replicate mRNA to simulate |
+| `--coTrsc` | - | `True` | Use ```--coTrsc``` to include cotranscriptional splicing or ```--no-coTrsc``` to exclude |
+| `--simTime` | `-t` | `60` | Amount of biological time to simulate per pre-mRNA in seconds. If coTrsc is True, this value will be added to the amount of time required to transcribe the gene. |
+| `--writeInterval` | `-wi` | `1.0` | Frequency at which the simulation will record its state in biological seconds. |
+| `--paramFile` | `-pf` | `None` | User input kinetic parameter file in the format exported by ```exportGeneSheet.py``` |
+| `--paramSet` | `-ps` | `None` | If multiple similar parameter sets are being tested, the user can create individual parameter files named like ```parameters_PS.xlsx``` and this variable sets the value for ```PS``` |
+| `--paramDir` | `-pd` | `None` | Directory where parameter file for ```--paramSet``` is located |
+| `--outputFile` | `-of` | `None` | User can provide custom names for ```.lm``` trajectory files. Otherwise isosplicer uses its own naming scheme. |
+| `--kinetics` | `-k` | `"global"` | Use ```global``` for unioform kinetics or ```site``` for site-specific kinetics |
 
 Example
 
 ```
-python exportGeneSheet.py -g SRSF6 -gd /Data2/zane/human_genome/GCF_000001405.38/ -exp site -pb 3 -od /home/zane/Models/
+python runGene.py -r 10 -g SRSF6 -od ./ -t 600 -wi 60 -gd /Data2/zane/human_genome/GCF_000001405.38/ -pf ./SRSF6_parameters.xlsx -of ./SRSF6_test.lm -k site
 ```
