@@ -1,5 +1,7 @@
 # isosplicer
-Module to simulate mRNA splicing reaction dynamics for the human genome.
+Module to simulate mRNA splicing reaction dynamics for the human genome. Reaction dynamics are simualted using the well-stirred stochastic reaction solvers in Lattice Microbes.
+
+This module includes the capability to simulate mRNA for the vast majority of the human genome.
 
 ## Contents
 | File-Directory | Description |
