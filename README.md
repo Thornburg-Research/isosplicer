@@ -4,7 +4,7 @@ Module to simulate mRNA splicing reaction dynamics for the human genome. Reactio
 This module includes the capability to simulate mRNA for the vast majority of the human genome.
 
 ## Contents
-| File-Directory | Description |
+| File/Directory | Description |
 |----------|-------------|
 | `model/` | Python executables to run the reaction model for mRNA splicing |
 | `human_genome/` | Preproccessing instructions and code to download and extract gene, transcript, and exon information from the human genome |
