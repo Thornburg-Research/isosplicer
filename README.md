@@ -27,8 +27,10 @@ Download/clone Lattice Microbes from the developer: https://github.com/Luthey-Sc
 
 Once you have ```Lattice-Microbes/``` locally, make a build directory and move into it. (Location is not important, but I recommend making it in this directory.)
 
-``` mkdir build_isosplicer
-cd build_isosplicer```
+```
+mkdir build_isosplicer
+cd build_isosplicer
+```
 
 In the build directory, we will install Lattice Microbes.  You will need to use the PATH to where your local Lattice-Microbes repo is located.
 
