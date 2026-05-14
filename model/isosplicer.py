@@ -1,4 +1,4 @@
-from jLM import CME
+from pyLM import CME
 
 import numpy as np
 import pandas as pd
