@@ -2,9 +2,12 @@
 Module to simulate mRNA splicing reaction dynamics for the human genome.
 
 ## Contents
-model
-human_genome
-publication_simulations
+| File-Directory | Description |
+|----------|-------------|
+| `model/` | Python executables to run the reaction model for mRNA splicing |
+| `human_genome/` | Preproccessing instructions and code to download and extract gene, transcript, and exon information from the human genome |
+| `publication_simulations/` | Parameter sets and executables used to generate trajectories for publication |
+| `isosplicer.yml` | Yaml dependencies file for creating the conda environemnt to run executables in ```model/``` |
 
 ## Installation
 This is a Python-based model that uses a conda environment to manage libraries.
