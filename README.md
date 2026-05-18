@@ -8,7 +8,7 @@ This module includes the capability to simulate mRNA for the vast majority of th
 |----------|-------------|
 | `model/` | Python executables to run the reaction model for mRNA splicing |
 | `human_genome/` | Preproccessing instructions and code to download and extract gene, transcript, and exon information from the human genome |
-| `publication_simulations/` | Parameter sets and executables used to generate trajectories for publication |
+| `publication_simulations/` | Parameter sets used to generate trajectories for publication and analysis scripts to generate figures |
 | `isosplicer.yml` | Yaml dependencies file for creating the conda environemnt to run executables in ```model/``` |
 
 ## Installation
