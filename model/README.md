@@ -54,3 +54,26 @@ Example
 ```
 python runGene.py -r 10 -g SRSF6 -od ./ -t 600 -wi 60 -gd /Data2/zane/human_genome/GCF_000001405.38/ -pf ./SRSF6_parameters.xlsx -of ./SRSF6_test.lm -k site
 ```
+
+
+### ```runGenes.py```: Running a simulation for a single gene
+
+| Argument | Short | Default | Description |
+|-------------|------|---------|-------------|
+| `--threads` | `-th` | `1` | Number of threads to execute simulations in parallel. Each thread will handle the simulation of a single gene or parameter set. This does not parallelize the ```replicates``` argument. |
+| `--geneListFile` | `-gl` | - | Text (```.txt```) file containing the list of genes to simulate. Each line of the file must have only a single gene name. See ```publication_simulations/``` for examples. |
+| `--genomeDir` | `-gd` | - | Directory containing extracted human genome files (e.g. SRSF6.xlsx) |
+| `--outputdir` | `-od` | `"./"` | Directory to save trajectory files |
+| `--replicates` | `-r` | `1` | Number of replicate mRNA to simulate |
+| `--coTrsc` | - | `True` | Use ```--coTrsc``` to include cotranscriptional splicing or ```--no-coTrsc``` to exclude |
+| `--simTime` | `-t` | `60` | Amount of biological time to simulate per pre-mRNA in seconds. If coTrsc is True, this value will be added to the amount of time required to transcribe the gene. |
+| `--writeInterval` | `-wi` | `1.0` | Frequency at which the simulation will record its state in biological seconds. |
+| `--parameterSets` | `-ps` | `None` | Number of different parameter sets that will be iterated over and executed with ```runGene.py``` using its ```--paramSet``` variable. |
+| `--paramDir` | `-pd` | `None` | Directory where parameter file for ```--paramSet``` is located |
+| `--kinetics` | `-k` | `"global"` | Use ```global``` for unioform kinetics or ```site``` for site-specific kinetics |
+
+Example
+
+```
+python runGenes.py -r 10 -th 20 -od ./ --coTrsc -t 600 -wi 60.0 -gl ./geneNames.txt -gd /Data2/zane/human_genome/GCF_000001405.38/
+```
