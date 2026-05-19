@@ -19,25 +19,25 @@ python runGenes.py -r 10 -th 20 -od ./Multi_Isoform_Genes_PostTrsc/ --no-coTrsc 
 ## SRSF6 MCF7 Gradient Normoxia
 
 ```
-python runGenes.py -r 1000 -th 3 -od ./SRSF6_MCF7_Grad_Norm/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_MCF7_Grad_Norm/ -ps 3 -k site
+python runGenes.py -r 1000 -th 15 -od ./SRSF6_MCF7_Grad_Norm/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_MCF7_Grad_Norm/ -ps 15 -k site
 ```
 
 ## SRSF6 MCF7 Gradient Hypoxia
 
 ```
-python runGenes.py -r 1000 -th 3 -od ./SRSF6_MCF7_Grad_Hyp/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_MCF7_Grad_Hyp/ -ps 3 -k site
+python runGenes.py -r 1000 -th 15 -od ./SRSF6_MCF7_Grad_Hyp/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_MCF7_Grad_Hyp/ -ps 15 -k site
 ```
 
 ## SRSF6 MCF7 Phosphorylation Normoxia
 
 ```
-python runGenes.py -r 1000 -th 3 -od ./SRSF6_MCF7_Phos_Norm/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_MCF7_Phos_Norm/ -ps 3 -k site
+python runGenes.py -r 1000 -th 15 -od ./SRSF6_MCF7_Phos_Norm/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_MCF7_Phos_Norm/ -ps 15 -k site
 ```
 
 ## SRSF6 MCF7 Phosphorylation Hypoxia
 
 ```
-python runGenes.py -r 1000 -th 3 -od ./SRSF6_MCF7_Phos_Hyp/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_MCF7_Phos_Hyp/ -ps 3 -k site
+python runGenes.py -r 1000 -th 15 -od ./SRSF6_MCF7_Phos_Hyp/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_MCF7_Phos_Hyp/ -ps 15 -k site
 ```
 
 ## SRSF6 Multi Cell Normoxia
