@@ -43,11 +43,11 @@ python runGenes.py -r 1000 -th 15 -od ./SRSF6_MCF7_Phos_Hyp/ --coTrsc -t 1200 -w
 ## SRSF6 Multi Cell Normoxia
 
 ```
-python runGenes.py -r 1000 -th 3 -od ./SRSF6_Multi_Cell_Norm/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_Multi_Cell_Norm/ -ps 3 -k site
+python runGenes.py -r 1000 -th 2 -od ./SRSF6_Multi_Cell_Norm/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_Multi_Cell_Norm/ -ps 2 -k site
 ```
 
 ## SRSF6 Multi Cell Hypoxia
 
 ```
-python runGenes.py -r 1000 -th 3 -od ./SRSF6_Multi_Cell_Hyp/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_Multi_Cell_Hyp/ -ps 3 -k site
+python runGenes.py -r 1000 -th 2 -od ./SRSF6_Multi_Cell_Hyp/ --coTrsc -t 1200 -wi 60.0 -gl ./SRSF6.txt -gd /PATH/GCF_000001405.38/ -pd ./params_SRSF6_Multi_Cell_Hyp/ -ps 2 -k site
 ```
